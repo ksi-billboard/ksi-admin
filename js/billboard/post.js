@@ -34,9 +34,7 @@ const insertBill = () => {
 };
 
 const responseData = (result) => {
-    console.log("Server Response:", result.data.data);
-    console.log("Server Message:", result.message);
-    console.log("Server Status:", result.status);
+    console.log("Server Response:", result);
 
     switch (result.status) {
         case 201:
