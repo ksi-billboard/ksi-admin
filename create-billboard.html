@@ -278,12 +278,12 @@
                       <div class="form-group row">
                         <label class="col-sm-3 col-form-label">Upload Image</label>
                         <div class="input-group col-sm-9">
-                          <input id="gambar" type="text" class="form-control file-upload-info" disabled placeholder="Upload Image" style="color: white;"/>
-                          <span class="input-group-append">
+                          <input id="gambar" type="file" class="form-control file-upload-info" disabled placeholder="Upload Image" style="color: white;"/>
+                          <!-- <span class="input-group-append">
                             <label class="btn btn-primary btn-md btn-file">
                               Upload<input id="gambarInput" name="gambar" type="file" hidden onchange="previewImage(this)">
                             </label>
-                          </span>
+                          </span> -->
                         </div>
                       </div>
 
@@ -421,11 +421,11 @@
 
     <script type="module" src="./js/billboard/post.js"></script>
 
-    <script>
+    <!-- <script>
       function previewImage(input) {
         var fileName = input.value.split('\\').pop(); // Mendapatkan nama file dari path lengkap
         document.getElementById('gambar').value = fileName;
       }
-    </script>
+    </script> -->
   </body>
 </html>
