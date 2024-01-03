@@ -8,7 +8,7 @@ const insertBill = () => {
     const tokenvalue = getCookie("Authorization");
 
     const gambarInput = document.querySelector('input[name="gambar"]');
-    const gambarFile = gambarInput.files[0];
+    const gambarFile = gambarInput.File.nama;
 
     console.log("Gambar:", gambarFile);
 
@@ -26,7 +26,7 @@ const insertBill = () => {
     formData.append("latitude", getValue("latitude"));
     formData.append("longitude", getValue("longitude"));
 
-    console.log("Data:", data);
+    console.log("Data:", formData);
 
     postWithToken(target_url, tokenkey, tokenvalue, data, responseData);
 };
