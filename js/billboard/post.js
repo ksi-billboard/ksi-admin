@@ -1,23 +1,5 @@
 import { getValue } from "https://jscroot.github.io/element/croot.js";
-import { getCookie } from "https://jscroot.github.io/cookie/croot.js";
-
-
-function postWithToken(target_url, FormData, responseFunction) {
-    const myHeaders = new Headers();
-    myHeaders.append("Authorization", getCookie("Authorization"));
-
-    const requestOptions = {
-        method: 'POST',
-        headers: myHeaders,
-        body: FormData,
-        redirect: 'follow'
-    };
-
-    fetch(target_url, requestOptions)
-        .then(response => response.text())
-        .then(result => responseFunction(JSON.parse(result)))
-        .catch(error => console.log('error', error));
-}
+import { postWithToken } from "../temp/component.js";
 
 const insertBill = () => {
     const target_url = "https://asia-southeast2-keamanansistem.cloudfunctions.net/billboard";
