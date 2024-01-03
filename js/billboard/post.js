@@ -12,27 +12,29 @@ const insertBill = () => {
 
     // console.log("Gambar:", gambarFile);
 
-    const formData = new FormData();
-    formData.append("gambar", getValue("gambar"));
-    formData.append("kode", getValue("kode"));
-    formData.append("nama", getValue("nama"));
-    formData.append("panjang", getValue("panjang"));
-    formData.append("lebar", getValue("lebar"));
-    formData.append("harga", getValue("harga"));
-    formData.append("regency", getValue("regency"));
-    formData.append("district", getValue("district"));
-    formData.append("village", getValue("village"));
-    formData.append("address", getValue("address"));
-    formData.append("latitude", getValue("latitude"));
-    formData.append("longitude", getValue("longitude"));
+    const data = {
+        gambar : getValue("gambar"),
+        kode : getValue("kode"),
+        nama : getValue("nama"),
+        panjang : getValue("panjang"),
+        lebar : getValue("lebar"),
+        harga : getValue("harga"),
+        regency : getValue("regency"),
+        district : getValue("district"),
+        village : getValue("village"),
+        address : getValue("address"),
+        latitude : getValue("latitude"),
+        longitude : getValue("longitude"),
 
-    console.log("Data:", formData);
+    }
 
-    postWithToken(target_url, tokenkey, tokenvalue, formData, responseData);
+    console.log("Data:", data);
+
+    postWithToken(target_url, tokenkey, tokenvalue, data, responseData);
 };
 
 const responseData = (result) => {
-    console.log("Server Response:", result.data);
+    console.log("Server Response:", result.data.data);
     console.log("Server Message:", result.message);
     console.log("Server Status:", result.status);
 
