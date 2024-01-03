@@ -8,7 +8,7 @@ const insertBill = () => {
     const tokenvalue = getCookie("Authorization");
 
     const gambarInput = document.querySelector('input[name="gambar"]');
-    const gambarFile = gambarInput.File.nama;
+    const gambarFile = gambarInput.files[0];
 
     console.log("Gambar:", gambarFile);
 
