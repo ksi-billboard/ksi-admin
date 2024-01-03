@@ -28,7 +28,7 @@ const insertBill = () => {
 
     console.log("Data:", formData);
 
-    postWithToken(target_url, tokenkey, tokenvalue, data, responseData);
+    postWithToken(target_url, tokenkey, tokenvalue, formData, responseData);
 };
 
 const responseData = (result) => {
