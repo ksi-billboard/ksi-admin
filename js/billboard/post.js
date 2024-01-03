@@ -7,13 +7,13 @@ const insertBill = () => {
     const tokenkey = "Authorization";
     const tokenvalue = getCookie("Authorization");
 
-    const gambarInput = document.getElementById("gambar");
-    const gambarFile = gambarInput.files[0];
+    // const gambarInput = document.getElementById("gambar");
+    // const gambarFile = gambarInput.files[0];
 
-    console.log("Gambar:", gambarFile);
+    // console.log("Gambar:", gambarFile);
 
     const formData = new FormData();
-    formData.append("gambar", gambarFile);
+    formData.append("gambar", getValue("gambar"));
     formData.append("kode", getValue("kode"));
     formData.append("nama", getValue("nama"));
     formData.append("panjang", getValue("panjang"));
