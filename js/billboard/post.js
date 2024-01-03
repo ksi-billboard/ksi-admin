@@ -10,6 +10,8 @@ const insertBill = () => {
     const gambarInput = document.querySelector('input[name="gambar"]');
     const gambarFile = gambarInput.files[0];
 
+    console.log("Gambar:", gambarFile);
+
     const formData = new FormData();
     formData.append("gambar", gambarFile);
     formData.append("kode", getValue("kode"));
