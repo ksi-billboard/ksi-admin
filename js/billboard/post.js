@@ -7,20 +7,22 @@ const insertBill = () => {
     const tokenkey = "Authorization";
     const tokenvalue = getCookie("Authorization");
 
-    const data = {
-        gambar : getValue("gambar"),
-        kode : getValue("kode"),
-        nama : getValue("nama"),
-        panjang : getValue("panjang"),
-        lebar : getValue("lebar"),
-        harga : getValue("harga"),
-        regency : getValue("regency"),
-        district : getValue("district"),
-        village : getValue("village"),
-        address : getValue("address"),
-        latitude : getValue("latitude"),
-        longitude : getValue("longitude"),
-    };
+    const gambarInput = document.querySelector('input[name="gambar"]');
+    const gambarFile = gambarInput.files[0];
+
+    const formData = new FormData();
+    formData.append("gambar", gambarFile);
+    formData.append("kode", getValue("kode"));
+    formData.append("nama", getValue("nama"));
+    formData.append("panjang", getValue("panjang"));
+    formData.append("lebar", getValue("lebar"));
+    formData.append("harga", getValue("harga"));
+    formData.append("regency", getValue("regency"));
+    formData.append("district", getValue("district"));
+    formData.append("village", getValue("village"));
+    formData.append("address", getValue("address"));
+    formData.append("latitude", getValue("latitude"));
+    formData.append("longitude", getValue("longitude"));
 
     console.log("Data:", data);
 
