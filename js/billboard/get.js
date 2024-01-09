@@ -8,7 +8,7 @@ const dataBill  = (value) => {
     console.log("value: ", value);
 
     const data = tableBill
-    .replace("#GAMBAR#", value.file)
+    .replace("#GAMBAR#", value.gambar)
     .replace("#NAMA#", value.nama)
     .replace("#PANJANG#", value.panjang)
     .replace("#LEBAR#", value.lebar)
