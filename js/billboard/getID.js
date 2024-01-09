@@ -10,15 +10,21 @@ const target_url = "https://asia-southeast2-keamanansistem.cloudfunctions.net/bi
 const dataBill  = (value) => {
     console.log("value: ", value);
 
-    const bil = singleTableBill + singleTableBill2
-
-    const data = bil
+    const data = singleTableBill
     .replace("#GAMBAR#", value.gambar)
     .replace("#KODE#", value.kode)
     .replace("#NAMA#", value.nama)
     .replace("#PANJANG#", value.panjang)
     .replace("#LEBAR#", value.lebar)
     .replace("#HARGA#", value.harga)
+
+    addInner("bill", data);
+}
+
+const dataBill2  = (value) => {
+    console.log("value: ", value);
+
+    const data2 = singleTableBill2
     .replace("#REGENCY#", value.regency)
     .replace("#DISTRICT#", value.district)
     .replace("#VILLAGE#", value.village)
@@ -26,16 +32,21 @@ const dataBill  = (value) => {
     .replace("#LATITUDE#", value.latitude)
     .replace("#LONGITUDE#", value.longitude)
 
-    addInner("bill", data);
-    addInner("bill2", data);
+    addInner("bill2", data2);
 }
 
 const responseData = (result) => {
     if (result.status === 200) {
         console.log(result.data);
 
-        result.data.forEach(dataBill);
+        result.data.forEach((value) => {
+            dataBill(value);
+            dataBill2(value);
+        });
+        
     }
 }
 
 getWithToken(target_url, responseData);
+
+
