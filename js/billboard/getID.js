@@ -26,8 +26,8 @@ const dataBill  = (value) => {
     .replace("#LATITUDE#", value.latitude)
     .replace("#LONGITUDE#", value.longitude)
 
-    addInner("bil", data);
-    addInner("bil2", data);
+    addInner("bill", data);
+    addInner("bill2", data);
 }
 
 const responseData = (result) => {
