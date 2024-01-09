@@ -39,7 +39,7 @@ const responseData = (result) => {
     if (result.status === 200) {
         console.log(result.data);
 
-        result.data.forEach((value) => {
+        result.data((value) => {
             dataBill(value);
             dataBill2(value);
         });
