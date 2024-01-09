@@ -1,6 +1,6 @@
 import { addInner } from "https://jscroot.github.io/element/croot.js";
 import { getWithToken } from "../temp/component.js";
-import { singleTableBill, singleTableBill2 } from "../temp/table.js";
+import { singleTableBill, singleTableBill1, singleTableBill2 } from "../temp/table.js";
 
 
 const urlParams = new URLSearchParams(window.location.search);
@@ -12,13 +12,21 @@ const dataBill  = (value) => {
 
     const data = singleTableBill
     .replace("#GAMBAR#", value.gambar)
+
+    addInner("bill", data);
+}
+
+const dataBill1  = (value) => {
+    console.log("value: ", value);
+
+    const data = singleTableBill1
     .replace("#KODE#", value.kode)
     .replace("#NAMA#", value.nama)
     .replace("#PANJANG#", value.panjang)
     .replace("#LEBAR#", value.lebar)
     .replace("#HARGA#", value.harga)
 
-    addInner("bill", data);
+    addInner("bill1", data);
 }
 
 const dataBill2  = (value) => {
@@ -40,6 +48,7 @@ const responseData = (result) => {
         console.log(result.data);
 
         dataBill(result.data);
+        dataBill1(result.data);
         dataBill2(result.data);
         
     }

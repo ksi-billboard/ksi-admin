@@ -267,20 +267,24 @@
           <div class="content-wrapper">
             <div class="page-header">
               <h3 class="page-title">List Billboard</h3>
+              <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                  <li class="breadcrumb-item"><a href="list-billboard.html">See All</a></li>
+                </ol>
+              </nav>
             </div>
 
             <div class="row">
-              <div class="col-12 grid-margin">
+              <div class="col-6 grid-margin">
                 <div class="card">
                     <div class="card-header">
                         <span class="card-header-title">Billboard</span>
                     </div>
                   <div class="card-body">
                     <div class="table-responsive">
-                      <table class="table" style="color: white;" id="bill">
+                      <table class="table" style="color: white;" id="bill1">
                         <thead>
                           <tr>
-                            <th> Gambar </th>
                             <th> Kode </th>
                             <th> Nama </th>
                             <th> Ukuran </th>
@@ -305,7 +309,7 @@
                 </div>
               </div>
               
-              <div class="col-12 grid-margin">
+              <div class="col-6 grid-margin">
                 <div class="card">
                     <div class="card-header">
                         <span class="card-header-title">Lokasi</span>
@@ -319,12 +323,15 @@
                             <th> District </th>
                             <th> Village </th>
                             <th> Address </th>
-                            <th> Location Point </th>
+                            <th> Latitude </th>
+                            <th> Longitude </th>
                           </tr>
                         </thead>
                         <!-- <tbody>
                           <tr>
-                            <td> Static Billboard </td>
+                            <td> 
+                                <img src="#GAMBAR#" alt="Free Website Template by Free-Template.co" class="img-fluid rounded-square" style="width: 100px; height: 100px;" /> 
+                            </td>
                             <td> Billboard </td>
                             <td> Rp. 6.000.000 </td>
                             <td> Available </td>
@@ -340,6 +347,43 @@
                 </div>
               </div>
             </div>
+
+            <center>
+                <div class="col-4 grid-margin">
+                  <div class="card">
+                      <div class="card-header">
+                          <span class="card-header-title">Gambar Billboard</span>
+                      </div>
+                    <div class="card-body">
+                      <div class="table-responsive">
+                        <table class="table" style="color: white;" id="bill">
+                          <!-- <thead>
+                            <tr>
+                              <th> Kode </th>
+                              <th> Nama </th>
+                              <th> Ukuran </th>
+                              <th> Harga </th>
+                            </tr>
+                          </thead> -->
+                          <!-- <tbody>
+                            <tr>
+                              <td> Static Billboard </td>
+                              <td> Billboard </td>
+                              <td> Rp. 6.000.000 </td>
+                              <td> Available </td>
+                              <td>
+                                <button type="button" class="btn btn-primary btn-rounded">Edit</button>
+                                <button type="button" class="btn btn-danger btn-rounded">Delete</button>
+                              </td>
+                            </tr>
+                          </tbody> -->
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            </center>
+
           </div>
           <!-- content-wrapper ends -->
           <!-- partial:../../partials/_footer.html -->

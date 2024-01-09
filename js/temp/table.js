@@ -1,31 +1,34 @@
 export const tableBill = `
+<ul class="job-listings mb-3">
 <li class="job-listing d-block d-sm-flex pb-3 pb-sm-0 align-items-center">
 <a href="single-billboard.html?id=#ID#"></a>
-<div class="job-listing-logo">
-  <img src="#GAMBAR#" alt="Free Website Template by Free-Template.co" class="img-fluid" />
+<div class="job-listing">
+  <img src="#GAMBAR#" class="img-fluid rounded-0" style="width: 300px; height: 150px;"/>
 </div>
 
 <div class="job-listing-about d-sm-flex custom-width w-100 justify-content-between mx-4">
   <div class="job-listing-position custom-width w-50 mb-3 mb-sm-0">
     <h2>#NAMA#</h2>
-    <strong>#PANJANG# x #LEBAR#</strong>
+    <strong>#PANJANG# m x #LEBAR# m</strong>
   </div>
   <div class="job-listing-meta">
     <span class="badge badge-danger">Rp. #HARGA#</span>
   </div>
 </div>
 </li>
+</ul>
 `;
 
 export const singleTableBill = `
 <td>
-<div class="job-listing-logo">
-  <img src="#GAMBAR#" alt="Free Website Template by Free-Template.co" class="img-fluid" />
-</div>
+<img src="#GAMBAR#" class="img-fluid rounded-0" style="width: 450px; height: 200px;"/>
 </td>
+`;
+
+export const singleTableBill1 = `
 <td> #KODE# </td>
 <td> #NAMA# </td>
-<td> #PANJANG# x #LEBAR# </td>
+<td> #PANJANG# m x #LEBAR# m </td>
 <td> Rp. #HARGA# </td>
 `;
 
@@ -34,5 +37,6 @@ export const singleTableBill2 = `
 <td> #DISTRICT# </td>
 <td> #VILLAGE# </td>
 <td> #ADDRESS# </td>
-<td></td>
+<td> #LATITUDE# </td>
+<td> #LONGITUDE# </td>
 `;
