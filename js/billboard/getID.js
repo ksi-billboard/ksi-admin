@@ -32,7 +32,7 @@ const dataBill2  = (value) => {
     .replace("#LATITUDE#", value.latitude)
     .replace("#LONGITUDE#", value.longitude)
 
-    addInner("bill2", data);
+    addInner("bill2", data2);
 }
 
 const responseData = (result) => {
