@@ -13,6 +13,7 @@ const dataBill  = (value) => {
     .replace("#PANJANG#", value.panjang)
     .replace("#LEBAR#", value.lebar)
     .replace("#HARGA#", value.harga)
+    .replace("#ID#", value._id)
 
     addInner("tableAllBill", data);
 }

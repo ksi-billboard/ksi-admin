@@ -1,6 +1,6 @@
 export const tableBill = `
 <li class="job-listing d-block d-sm-flex pb-3 pb-sm-0 align-items-center">
-<a href="single-billboard.html"></a>
+<a href="single-billboard.html?id=#ID#"></a>
 <div class="job-listing-logo">
   <img src="#GAMBAR#" alt="Free Website Template by Free-Template.co" class="img-fluid" />
 </div>
@@ -15,4 +15,22 @@ export const tableBill = `
   </div>
 </div>
 </li>
+`;
+
+export const singleTableBill = `
+<td>
+<img src="#GAMBAR#" alt="Free Website Template by Free-Template.co" class="img-fluid" />
+</td>
+<td> #KODE# </td>
+<td> #NAMA# </td>
+<td> #PANJANG# x #LEBAR# </td>
+<td> Rp. #HARGA# </td>
+`;
+
+export const singleTableBill2 = `
+<td> #REGENCY# </td>
+<td> #DISTRICT# </td>
+<td> #VILLAGE# </td>
+<td> #ADDRESS# </td>
+<td> #LATITUDE#, #LONGITUDE# </td>
 `;
