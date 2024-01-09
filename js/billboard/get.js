@@ -18,7 +18,7 @@ const dataBill  = (value) => {
 }
 
 const responseData = (result) => {
-    if (result.status === true) {
+    if (result.status === 200) {
         result.data.forEach(dataBill);
     }
 }
