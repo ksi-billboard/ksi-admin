@@ -19,7 +19,9 @@ export const tableBill = `
 
 export const singleTableBill = `
 <td>
-<img src="#GAMBAR#" alt="Free Website Template by Free-Template.co" class="img-fluid" />
+<div class="job-listing-logo">
+  <img src="#GAMBAR#" alt="Free Website Template by Free-Template.co" class="img-fluid" />
+</div>
 </td>
 <td> #KODE# </td>
 <td> #NAMA# </td>
@@ -32,5 +34,5 @@ export const singleTableBill2 = `
 <td> #DISTRICT# </td>
 <td> #VILLAGE# </td>
 <td> #ADDRESS# </td>
-<td> #LATITUDE#, #LONGITUDE# </td>
+<td></td>
 `;
