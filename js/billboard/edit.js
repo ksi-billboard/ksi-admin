@@ -15,13 +15,11 @@ export const isiData = (results) => {
       { id: "longitude", path: "data.longitude" },
     ];
   
-    console.log("inputMapping:", inputMapping);
     inputMapping.forEach(({ id, path, index, property }) => {
       const inputElement = document.getElementById(id);
       const value = getNestedValue(results, path, index, property);
-      inputElement.value = value;
-
       console.log("value:", value);
+      inputElement.value = value;
     });
   };
   
