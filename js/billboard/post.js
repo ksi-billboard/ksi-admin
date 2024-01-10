@@ -1,8 +1,10 @@
 import { getValue } from "https://jscroot.github.io/element/croot.js";
-import { postWithToken } from "../temp/component.js";
+import { postWithToken } from "https://jscroot.github.io/api/croot.js";
 
 const insertBill = () => {
     const target_url = "https://asia-southeast2-keamanansistem.cloudfunctions.net/billboard";
+    const tokenkey = "Authorization";
+    const tokenvalue = getCookie("Authorization");
 
     const imageInput = document.getElementById("gambar");
     const file = imageInput.files[0];
@@ -25,7 +27,7 @@ const insertBill = () => {
 
     console.log("Data:", formData);
 
-    postWithToken(target_url, formData, responseData);
+    postWithToken(target_url, tokenkey, tokenvalue, formData, responseData);
 };
 
 const responseData = (result) => {
@@ -45,27 +47,6 @@ const responseData = (result) => {
             Swal.fire({
                 icon: "error",
                 title: "Bad Request: Insert Failed",
-                text: result.message,
-            });
-            break;
-        case 401:
-            Swal.fire({
-                icon: "error",
-                title: "Unauthorized: Insert Failed",
-                text: result.message,
-            });
-            break;
-        case 403:
-            Swal.fire({
-                icon: "error",
-                title: "Forbidden: Insert Failed",
-                text: result.message,
-            });
-            break;
-        case 500:
-            Swal.fire({
-                icon: "error",
-                title: "Internal Server Error: Insert Failed",
                 text: result.message,
             });
             break;
