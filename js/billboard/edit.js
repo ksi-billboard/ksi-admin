@@ -19,19 +19,14 @@ export const isiData = (results) => {
     const inputElement = document.getElementById(id);
     const value = getNestedValue(results, path, index, property);
     console.log("value:", value);
+
+    const fileName = extractFileNameFromUrl(value);
+    const fileNameElement = document.getElementById("gambar");
+    fileNameElement.textContent = fileName;
+    console.log("fileName:", fileName);
+
     inputElement.value = value;
-
-    if (id === "gambar") {
-      const imageElement = document.getElementById("gambar");
-      imageElement.src = value;
-
-      // Mengekstrak nama file dari URL gambar
-      const fileName = extractFileNameFromUrl(value);
-
-      // Menampilkan nama file di elemen dengan ID "gambarFileName"
-      const fileNameElement = document.getElementById("gambarFileName");
-      fileNameElement.textContent = fileName;
-    }
+    
   });
 };
 
