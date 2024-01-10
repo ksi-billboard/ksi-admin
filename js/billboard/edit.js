@@ -1,6 +1,6 @@
 export const isiData = (results) => {
     console.log("isiData:", results);
-    const dataBil = [
+    const inputMapping = [
       { id: "gambar", path: "data.gambar" },
       { id: "kode", path: "data.kode" },
       { id: "nama", path: "data.nama" },
@@ -15,17 +15,20 @@ export const isiData = (results) => {
       { id: "longitude", path: "data.longitude" },
     ];
   
-    dataBil.forEach(({ id, path, index, property }) => {
+    console.log("inputMapping:", inputMapping);
+    inputMapping.forEach(({ id, path, index, property }) => {
       const inputElement = document.getElementById(id);
       const value = getNestedValue(results, path, index, property);
       inputElement.value = value;
+
+      console.log("value:", value);
     });
   };
   
-  const getNestedValue = (obj, path, index = 0, property = "") => {
+  const getNestedValue = (obj, path, index, property) => {
     const value = path
       .split(".")
-      .reduce((value, key) => (value && value[key] !== undefined ? value[key] : ""), obj);
+      .reduce((value, key) => (value && value[key] ? value[key] : ""), obj);
   
     if (
       Array.isArray(value) &&
@@ -37,4 +40,3 @@ export const isiData = (results) => {
   
     return value;
   };
-  
