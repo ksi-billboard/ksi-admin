@@ -1,11 +1,8 @@
 import { getValue } from "https://jscroot.github.io/element/croot.js";
 import { insertWithToken } from "../temp/component.js";
-import { getCookie } from "https://jscroot.github.io/cookie/croot.js";
 
 const insertBill = () => {
     const target_url = "https://asia-southeast2-keamanansistem.cloudfunctions.net/billboard";
-    const tokenkey = "Authorization";
-    const tokenvalue = getCookie("Authorization");
 
     const imageInput = document.getElementById("gambar");
     const file = imageInput.files[0];
@@ -28,7 +25,7 @@ const insertBill = () => {
 
     console.log("Data:", formData);
 
-    insertWithToken(target_url, tokenkey, tokenvalue, formData, responseData);
+    insertWithToken(target_url, formData, responseData);
 };
 
 const responseData = (result) => {
