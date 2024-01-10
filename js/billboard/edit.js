@@ -19,6 +19,10 @@ export const isiData = (results) => {
     const value = getNestedValue(results, input.path, 0, input.property);
     console.log("value:", value);
     document.getElementById(input.id).value = value;
+    
+    if (input.id === "gambar") {
+      document.getElementById("gambar").src = value;
+    }
   });
 }
 
