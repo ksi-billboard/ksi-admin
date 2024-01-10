@@ -14,6 +14,8 @@ const dataBill  = (value) => {
     .replace("#LEBAR#", value.lebar)
     .replace("#HARGA#", value.harga)
     .replace("#ID#", value._id)
+    .replace("#IDEDIT#", value._id)
+    .replace("#IDHAPUS#", value._id)
     .replace("#HAPUS#", value._id)
 
     addInner("tableAllBill", data);
