@@ -1,5 +1,5 @@
 import { getValue } from "https://jscroot.github.io/element/croot.js";
-import { postWithToken } from "https://jscroot.github.io/api/croot.js";
+import { insertWithToken } from "../temp/component.js";
 import { getCookie } from "https://jscroot.github.io/cookie/croot.js";
 
 const insertBill = () => {
@@ -28,7 +28,7 @@ const insertBill = () => {
 
     console.log("Data:", formData);
 
-    postWithToken(target_url, tokenkey, tokenvalue, formData, responseData);
+    insertWithToken(target_url, tokenkey, tokenvalue, formData, responseData);
 };
 
 const responseData = (result) => {
