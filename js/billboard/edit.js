@@ -1,5 +1,4 @@
 export const isiData = (results) => {
-  console.log("isiData:", results);
   const inputMapping = [
     // { id: "gambar", path: "data.gambar" },
     { id: "kode", path: "data.kode" },
@@ -18,7 +17,6 @@ export const isiData = (results) => {
   inputMapping.forEach(({ id, path, index, property }) => {
     const inputElement = document.getElementById(id);
     const value = getNestedValue(results, path, index, property);
-    console.log("value:", value);
 
     // const fileName = extractFileNameFromUrl(value);
     // const fileNameElement = document.getElementById("gambar");

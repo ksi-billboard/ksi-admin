@@ -10,8 +10,6 @@ const updateTodo = () => {
     const imageInput = document.getElementById("gambar");
     const file = imageInput.files[0];
 
-    console.log("Gambar:", file);
-
     const formData = new FormData();
     formData.append("file", file);
     formData.append("kode", getValue("kode"));
@@ -27,8 +25,6 @@ const updateTodo = () => {
     formData.append("longitude", getValue("longitude"));
     
     putData(target_url, formData, responseData);
-
-    console.log("Data:", data);
 };
 
 const responseData = (result) => {
@@ -36,7 +32,7 @@ const responseData = (result) => {
     if (result.status === 200) {
         Swal.fire({
             icon: "success",
-            title: "Update Successful",
+            // title: "Update Successful",
             text: result.message,
         }).then(() => {
             window.location.href = "list-billboard.html";
@@ -44,7 +40,7 @@ const responseData = (result) => {
     } else {
         Swal.fire({
             icon: "error",
-            title: "Update Failed",
+            // title: "Update Failed",
             text: result.message,
         });
     }

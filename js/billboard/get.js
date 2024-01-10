@@ -5,8 +5,6 @@ import { tableBill } from "../temp/table.js";
 const target_url = "https://asia-southeast2-keamanansistem.cloudfunctions.net/billboard"
 
 const dataBill  = (value) => {
-    console.log("value: ", value);
-
     const data = tableBill
     .replace("#GAMBAR#", value.gambar)
     .replace("#NAMA#", value.nama)

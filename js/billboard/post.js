@@ -7,8 +7,6 @@ const insertBill = () => {
     const imageInput = document.getElementById("gambar");
     const file = imageInput.files[0];
 
-    console.log("Gambar:", file);
-
     const formData = new FormData();
     formData.append("file", file);
     formData.append("kode", getValue("kode"));
@@ -23,8 +21,6 @@ const insertBill = () => {
     formData.append("latitude", getValue("latitude"));
     formData.append("longitude", getValue("longitude"));
 
-    console.log("Data:", formData);
-
     insertWithToken(target_url, formData, responseData);
 };
 
@@ -35,7 +31,7 @@ const responseData = (result) => {
         case 201:
             Swal.fire({
                 icon: "success",
-                title: "Insert Successful",
+                // title: "Insert Successful",
                 text: result.message,
             }).then(() => {
                 window.location.href = "list-billboard.html";
@@ -44,14 +40,14 @@ const responseData = (result) => {
         case 400:
             Swal.fire({
                 icon: "error",
-                title: "Bad Request: Insert Failed",
+                // title: "Bad Request: Insert Failed",
                 text: result.message,
             });
             break;
         default:
             Swal.fire({
                 icon: "error",
-                title: "Unknown Error: Insert Failed",
+                // title: "Unknown Error: Insert Failed",
                 text: result.message,
             });
             break;

@@ -8,8 +8,6 @@ const id = urlParams.get("id");
 const target_url = "https://asia-southeast2-keamanansistem.cloudfunctions.net/billboard?id=" + id;
 
 const dataBill  = (value) => {
-    console.log("value: ", value);
-
     const data = singleTableBill
     .replace("#GAMBAR#", value.gambar)
 
@@ -17,8 +15,6 @@ const dataBill  = (value) => {
 }
 
 const dataBill1  = (value) => {
-    console.log("value: ", value);
-
     const data = singleTableBill1
     .replace("#KODE#", value.kode)
     .replace("#NAMA#", value.nama)
@@ -30,8 +26,6 @@ const dataBill1  = (value) => {
 }
 
 const dataBill2  = (value) => {
-    console.log("value: ", value);
-
     const data2 = singleTableBill2
     .replace("#REGENCY#", value.regency)
     .replace("#DISTRICT#", value.district)
@@ -45,8 +39,6 @@ const dataBill2  = (value) => {
 
 const responseData = (result) => {
     if (result.status === 200) {
-        console.log(result.data);
-
         dataBill(result.data);
         dataBill1(result.data);
         dataBill2(result.data);

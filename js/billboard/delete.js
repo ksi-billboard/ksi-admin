@@ -5,7 +5,7 @@ const deleteBill = async (IDHAPUS) => {
   const token = getCookie("Authorization");
 
   const isConfirmed = await Swal.fire({
-    title: "Benarkah anda ingin menghapus data ini?",
+    text: "Benarkah anda ingin menghapus data ini?",
     icon: "warning",
     showCancelButton: true,
     confirmButtonColor: "#3085d6",
@@ -15,7 +15,6 @@ const deleteBill = async (IDHAPUS) => {
   });
 
   if (isConfirmed.isConfirmed) {
-    // console.log("Confirmed:", isConfirmed.isConfirmed);
     const myHeaders = new Headers();
     myHeaders.append("Authorization", token);
 
@@ -31,7 +30,7 @@ const deleteBill = async (IDHAPUS) => {
       if (response.ok) {
         await Swal.fire({
           icon: "success",
-          title: "Data berhasil dihapus",
+          text: "Data berhasil dihapus",
           showConfirmButton: false,
         });
         location.reload();
