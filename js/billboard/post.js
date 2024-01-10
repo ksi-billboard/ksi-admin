@@ -1,4 +1,5 @@
 import { insertWithToken } from "../temp/component.js";
+import { getValue } from "https://jscroot.github.io/element/croot.js";
 
 const insertBill = () => {
     const target_url = "https://asia-southeast2-keamanansistem.cloudfunctions.net/billboard";
