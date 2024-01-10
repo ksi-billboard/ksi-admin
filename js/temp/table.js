@@ -17,7 +17,7 @@ export const tableBill = `
       <div class="job-listing-meta mx-4">
         <div class="job-listing-position">
           <a href="edit-billboard.html?id=#IDEDIT#" class="btn btn-warning flex-grow-1 ml-6" data-bill-id="#IDHAPUS#"></a>
-          <a type="button" class="btn btn-danger flex-grow-1 ml-4" onclick="deleteBill("#HAPUS#")"></a>
+          <a href="#" type="button" class="btn btn-danger flex-grow-1 ml-4" onclick="deleteBill('#HAPUS#')"></a>
         </div>
       </div>
     </div>
