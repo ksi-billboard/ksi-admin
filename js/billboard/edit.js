@@ -2,6 +2,7 @@ export const isiData = (results) => {
   console.log("isiData:", results);
 
   const inputMapping = [
+    { id: "gambar", path: "data", property: "gambar"},
     { id: "kode", path: "data", property: "kode" },
     { id: "nama", path: "data", property: "nama" },
     { id: "panjang", path: "data", property: "panjang" },
@@ -19,10 +20,6 @@ export const isiData = (results) => {
     const value = getNestedValue(results, input.path, 0, input.property);
     console.log("value:", value);
     document.getElementById(input.id).value = value;
-    
-    if (input.id === "gambar") {
-      document.getElementById("gambar").src = value;
-    }
   });
 }
 
