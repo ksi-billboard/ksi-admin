@@ -1,7 +1,7 @@
 export const isiData = (results) => {
     console.log("isiData:", results);
     const inputMapping = [
-      { id: "gambar", path: "data.gambar" },
+      // { id: "gambar", path: "data.gambar" },
       { id: "kode", path: "data.kode" },
       { id: "nama", path: "data.nama" },
       { id: "panjang", path: "data.panjang" },
@@ -19,12 +19,13 @@ export const isiData = (results) => {
       const inputElement = document.getElementById(id);
       const value = getNestedValue(results, path, index, property);
       console.log("value:", value);
+      inputElement.value = value;
       
-      if (inputElement.type === "file") {
-        inputElement.files[0] = value;
-      } else {
-        inputElement.value = value;
-      }
+      // if (inputElement.type === "file") {
+      //   inputElement.files[0] = value;
+      // } else {
+      //   inputElement.value = value;
+      // }
     });
   };
   
