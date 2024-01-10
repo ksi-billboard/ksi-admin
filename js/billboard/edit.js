@@ -1,6 +1,6 @@
 export const isiData = (results) => {
   console.log("isiData:", results);
-  const dataTodo = [
+  const dataBil = [
     {id: "gambar", path: "data.gambar"},
     {id: "kode", path: "data.kode"},
     {id: "nama", path: "data.nama"},
@@ -16,7 +16,7 @@ export const isiData = (results) => {
   ];
 
 
-  dataTodo.forEach(({ id, path, index, property }) => {
+  dataBil.forEach(({ id, path, index, property }) => {
     const inputElement = document.getElementById(id);
     const value = getNestedValue(results, path, index, property);
     inputElement.value = value;
