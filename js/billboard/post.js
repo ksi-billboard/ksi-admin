@@ -1,4 +1,3 @@
-import { getValue } from "https://jscroot.github.io/element/croot.js";
 import { insertWithToken } from "../temp/component.js";
 
 const insertBill = () => {

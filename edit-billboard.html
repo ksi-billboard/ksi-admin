@@ -15,19 +15,19 @@
     <!-- endinject -->
     <!-- Layout styles -->
     <link rel="stylesheet" href="assets/css/style.css" />
-    <link rel="stylesheet" href="assets/css/style1.css" />
-    <link rel="stylesheet" href="assets/fonts/line-icons/style.css" />
-    <link rel="stylesheet" href="assets/fonts/icomoon/style.css" />
     <!-- End layout styles -->
     <link rel="shortcut icon" href="assets/images/favicon.png" />
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.all.min.js"></script>
   </head>
   <body>
     <div class="container-scroller">
-      <!-- partial:../../partials/_sidebar.html -->
+      <!-- partial:partials/_sidebar.html -->
       <nav class="sidebar sidebar-offcanvas" id="sidebar">
         <div class="sidebar-brand-wrapper d-none d-lg-flex align-items-center justify-content-center fixed-top">
-          <a class="sidebar-brand brand-logo" href="index.html"><img src="assets/images/favicon.png" alt="logo" /></a>
-          <a class="sidebar-brand brand-logo-mini" href="index.html"><img src="assets/images/favicon.png" alt="logo" /></a>
+          <a class="sidebar-brand brand-logo" href="index.html"><img src="" alt="logo" /></a>
+          <a class="sidebar-brand brand-logo-mini" href="index.html"><img src="" alt="logo" /></a>
         </div>
         <ul class="nav">
           <li class="nav-item profile">
@@ -110,7 +110,7 @@
       </nav>
       <!-- partial -->
       <div class="container-fluid page-body-wrapper">
-        <!-- partial:../../partials/_navbar.html -->
+        <!-- partial:partials/_navbar.html -->
         <nav class="navbar p-0 fixed-top d-flex flex-row">
           <div class="navbar-brand-wrapper d-flex d-lg-none align-items-center justify-content-center">
             <a class="navbar-brand brand-logo-mini" href="index.html"><img src="assets/images/logo-mini.svg" alt="logo" /></a>
@@ -266,44 +266,132 @@
         <div class="main-panel">
           <div class="content-wrapper">
             <div class="page-header">
-              <h3 class="page-title">List Billboard</h3>
-              <nav aria-label="breadcrumb">
-                <ol class="breadcrumb">
-                  <li class="breadcrumb-item"><a href="create-billboard.html">Add Billboard</a></li>
-                </ol>
-              </nav>
+              <h3 class="page-title">Edit Billboard</h3>
             </div>
-            <div class="job" id="tableAllBill">
-              <!-- <ul class="job-listings mb-5">
-                <li class="job-listing d-block d-sm-flex pb-3 pb-sm-0 align-items-center">
-                  <a href="single-billboard.html"></a>
-                  <div class="job-listing-logo">
-                    <img src="assets/images/12218.jpg" alt="Free Website Template by Free-Template.co" class="img-fluid" />
-                  </div>
+            <div class="row">
+              <div class="col-6 grid-margin stretch-card">
+                <div class="card">
+                  <div class="card-body">
+                    <h4 class="card-title">Billboard</h4>
 
-                  <div class="job-listing-about d-sm-flex custom-width w-100 justify-content-between mx-4">
-                    <div class="job-listing-position custom-width w-50 mb-3 mb-sm-0">
-                      <h2>Static Billboard</h2>
-                      <strong>Billboard</strong>
-                    </div>
-                    <div class="job-listing-meta">
-                      <span class="badge badge-primary">Rp. 6.000.000</span>
-                    </div>
-
-                    <div class="job-listing-meta mx-4">
-                      <div class="job-listing-position">
-                        <a href="edit-billboard.html" class="btn btn-warning flex-grow-1 ml-6"></a>
-                        <a type="button" class="btn btn-danger flex-grow-1 ml-4"></a>
+                    <form class="forms-sample">
+                      <div class="form-group row">
+                        <label class="col-sm-3 col-form-label">Upload Image</label>
+                        <div class="input-group col-sm-9">
+                          <input id="gambar" type="file" class="form-control file-upload-info" placeholder="Upload Image" style="color: white;"/>
+                          <!-- <span class="input-group-append">
+                            <label class="btn btn-primary btn-md btn-file">
+                              Upload<input id="gambarInput" name="gambar" type="file" hidden onchange="previewImage(this)">
+                            </label>
+                          </span> -->
+                        </div>
                       </div>
-                    </div>
-                    
+
+                      <div class="form-group row">
+                        <label for="kode" class="col-sm-3 col-form-label">Kode</label>
+                        <div class="col-sm-9">
+                          <input type="text" class="form-control" id="kode" placeholder="Kode" style="color: white;"/>
+                        </div>
+                      </div>
+
+                      <div class="form-group row">
+                        <label for="nama" class="col-sm-3 col-form-label">Nama</label>
+                        <div class="col-sm-9">
+                          <input type="text" class="form-control" id="nama" placeholder="Nama" style="color: white;"/>
+                        </div>
+                      </div>
+
+                      <div class="form-group row">
+                        <label class="col-sm-3 col-form-label">Ukuran</label>
+                        <div class="col-sm-4">
+                          <input type="text" id="panjang" class="form-control" placeholder="Panjang" style="color: white;">
+                        </div>
+
+                        <label class="col-sm-1 text-center mt-2 col-form-label">X</label>
+                        <div class="col-sm-4">
+                          <input type="text" id="lebar" class="form-control" placeholder="Lebar" style="color: white;">
+                        </div>
+                      </div>
+
+                      <!-- <div class="form-group row" style="visibility: hidden;">
+                        <label for="hidden" class="col-sm-3 col-form-label"></label>
+                        <div class="col-sm-9">
+                          <input type="text" class="form-control" id="hidden" placeholder="hidden" style="color: white;"/>
+                        </div>
+                      </div> -->
+                      <br>
+                      
+                      <div class="form-group row">
+                        <label for="harga" class="col-sm-3 col-form-label">Harga</label>
+                        <div class="col-sm-9">
+                          <input type="text" class="form-control" id="harga" placeholder="Harga" style="color: white;"/>
+                        </div>
+                      </div>
+                    </form>
                   </div>
-                </li>
-              </ul> -->
+                </div>
+              </div>
+
+              <div class="col-6 grid-margin stretch-card">
+                <div class="card">
+                  <div class="card-body">
+                    <h4 class="card-title">Location</h4>
+                    <form class="forms-sample">
+                      <div class="form-group row">
+                        <label for="regency" class="col-sm-3 col-form-label">Regency</label>
+                        <div class="col-sm-9">
+                          <input type="text" class="form-control" id="regency" placeholder="Regency" style="color: white;"/>
+                        </div>
+                      </div>
+
+                      <div class="form-group row">
+                        <label for="district" class="col-sm-3 col-form-label">District</label>
+                        <div class="col-sm-9">
+                          <input type="text" class="form-control" id="district" placeholder="District" style="color: white;"/>
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                        <label for="village" class="col-sm-3 col-form-label">Village</label>
+                        <div class="col-sm-9">
+                          <input type="text" class="form-control" id="village" placeholder="Village" style="color: white;"/>
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                        <label for="address" class="col-sm-3 col-form-label">Address</label>
+                        <div class="col-sm-9">
+                          <input type="text" class="form-control" id="address" placeholder="Address" style="color: white;"/>
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                        <label for="latitude" class="col-sm-3 col-form-label">Latitude</label>
+                        <div class="col-sm-9">
+                          <input type="text" class="form-control" id="latitude" placeholder="Latitude" style="color: white;"/>
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                        <label for="longitude" class="col-sm-3 col-form-label">Longitude</label>
+                        <div class="col-sm-9">
+                          <input type="text" class="form-control" id="longitude" placeholder="Longitude" style="color: white;"/>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 grid-margin stretch-card">
+                <div class="card">
+                  <div class="card-body">
+                    <button type="button" id="btnUpdate" class="btn btn-primary mr-2">Update</button>
+                    <a href="list-billboard.html" class="btn btn-dark">Cancel</a hr>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
+
+
           <!-- content-wrapper ends -->
-          <!-- partial:../../partials/_footer.html -->
+          <!-- partial:partials/_footer.html -->
           <footer class="footer">
             <div class="d-sm-flex justify-content-center justify-content-sm-between">
               <span class="text-muted d-block text-center text-sm-left d-sm-inline-block">Copyright © bootstrapdash.com 2020</span>
@@ -331,6 +419,14 @@
     <!-- Custom js for this page -->
     <!-- End custom js for this page -->
 
-    <script type="module" src="./js/billboard/get.js"></script>
+    <script type="module" src="./js/billboard/fetchedit.js"></script>
+    <script type="module" src="./js/billboard/update.js"></script>
+
+    <!-- <script>
+      function previewImage(input) {
+        var fileName = input.value.split('\\').pop(); // Mendapatkan nama file dari path lengkap
+        document.getElementById('gambar').value = fileName;
+      }
+    </script> -->
   </body>
 </html>
