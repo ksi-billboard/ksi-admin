@@ -1,39 +1,40 @@
 export const isiData = (results) => {
-  console.log("isiData:", results);
-
-  const inputMapping = [
-    { id: "gambar", path: "data", property: "gambar"},
-    { id: "kode", path: "data", property: "kode" },
-    { id: "nama", path: "data", property: "nama" },
-    { id: "panjang", path: "data", property: "panjang" },
-    { id: "lebar", path: "data", property: "lebar" },
-    { id: "harga", path: "data", property: "harga" },
-    { id: "regency", path: "data", property: "regency" },
-    { id: "district", path: "data", property: "district" },
-    { id: "village", path: "data", property: "village" },
-    { id: "address", path: "data", property: "address" },
-    { id: "latitude", path: "data", property: "latitude" },
-    { id: "longitude", path: "data", property: "longitude" },
-  ];
-
-  inputMapping.forEach((input) => {
-    const value = getNestedValue(results, input.path, 0, input.property);
-    console.log("value:", value);
-    document.getElementById(input.id).value = value;
-  });
-}
-
-const getNestedValue = (obj, path, defaultValue, property) => {
-  const travel = (regexp) =>
-    String.prototype.split
-      .call(path, regexp)
-      .filter(Boolean)
-      .reduce(
-        (res, key) => (res !== null && res !== undefined ? res[key] : res),
-        obj
-      );
-
-  const result = travel(/[,[\]]+?/) || travel(/[,[\].]+?/);
-  return result === undefined || result === obj ? defaultValue : result[property];
-};
-
+    console.log("isiData:", results);
+    const inputMapping = [
+      // { id: "gambar", path: "data.gambar" },
+      { id: "kode", path: "data.kode" },
+      { id: "nama", path: "data.nama" },
+      { id: "panjang", path: "data.panjang" },
+      { id: "lebar", path: "data.lebar" },
+      { id: "harga", path: "data.harga" },
+      { id: "regency", path: "data.regency" },
+      { id: "district", path: "data.district" },
+      { id: "village", path: "data.village" },
+      { id: "address", path: "data.address" },
+      { id: "latitude", path: "data.latitude" },
+      { id: "longitude", path: "data.longitude" },
+    ];
+  
+    inputMapping.forEach(({ id, path, index, property }) => {
+      const inputElement = document.getElementById(id);
+      const value = getNestedValue(results, path, index, property);
+      console.log("value:", value);
+      inputElement.value = value;
+    });
+  };
+  
+  const getNestedValue = (obj, path, index, property) => {
+    const value = path
+      .split(".")
+      .reduce((value, key) => (value && value[key] ? value[key] : ""), obj);
+  
+    if (
+      Array.isArray(value) &&
+      value.length > index &&
+      value[index].hasOwnProperty(property)
+    ) {
+      return value[index][property];
+    }
+  
+    return value;
+  };
