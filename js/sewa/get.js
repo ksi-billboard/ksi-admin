@@ -5,8 +5,6 @@ import { tableSewa } from "../temp/table.js";
 const target_url = "https://asia-southeast2-keamanansistem.cloudfunctions.net/sewa"
 
 const dataSewa  = (value) => {
-
-    console.log(value);
     const data = tableSewa
     .replace("#GAMBAR#", value.content)
     .replace("#MULAI#", value.tanggal_mulai)
@@ -14,11 +12,13 @@ const dataSewa  = (value) => {
     .replace("#ID#", value._id)
 
     addInner("tableAllSewa", data);
+
+    console.log(data);
 }
 
 const responseData = (result) => {
     if (result.status === 200) {
-        comsole.log(result.data);
+        console.log(result.data);
         result.data.forEach(dataSewa);
     }
 }

@@ -27,7 +27,7 @@ export const tableBill = `
 
 export const singleTableBill = `
 <td>
-<img src="#GAMBAR#" class="img-fluid rounded-0" style="width: 450px; height: 200px;"/>
+<img src="#GAMBAR#" class="img-fluid rounded-0" style="width: 450px; height: 280px;"/>
 </td>
 `;
 
@@ -60,12 +60,18 @@ export const tableSewa = `
       <h2><b>Tanggal Mulai : </b> #MULAI#</h2>
       <h2><b>Tanggal Selesai : </b> #SELESAI#</h2> 
       </div>
-      <div class="job-listing-meta mx-4">
-          <div class="job-listing-position">
-          <a href="#" class="btn btn-primary flex-grow-1 ml-6"></a>
-          </div>
-      </div>
     </div>
   </li>
 </ul>
+`;
+
+export const singleTableSewa = `
+<td>
+<img src="#GAMBAR1#" class="img-fluid rounded-0" style="width: 450px; height: 280px;"/>
+</td>
+`;
+
+export const singleTableSewa1 = `
+<td> #MULAI# </td>
+<td> #SELESAI# </td>
 `;
