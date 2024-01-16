@@ -17,20 +17,20 @@ const dataBill  = (value) => {
 }
 
 const dataBill1  = (value) => {
-    const data1 = singleTableBill1
+    const data = singleTableBill1
     .replace("#KODE#", value.kode)
     .replace("#NAMA#", value.nama)
     .replace("#PANJANG#", value.panjang)
     .replace("#LEBAR#", value.lebar)
     .replace("#HARGA#", value.harga)
 
-    addInner("bill1", data1);
+    addInner("bill1", data);
 
-    console.log(data1);
+    console.log(data);
 }
 
 const dataBill2  = (value) => {
-    const data2 = singleTableBill2
+    const data = singleTableBill2
     .replace("#REGENCY#", value.regency)
     .replace("#DISTRICT#", value.district)
     .replace("#VILLAGE#", value.village)
@@ -38,9 +38,9 @@ const dataBill2  = (value) => {
     .replace("#LATITUDE#", value.latitude)
     .replace("#LONGITUDE#", value.longitude)
 
-    addInner("bill2", data2);
+    addInner("bill2", data);
 
-    console.log(data2);
+    console.log(data);
 }
 
 const responseData = (result) => {

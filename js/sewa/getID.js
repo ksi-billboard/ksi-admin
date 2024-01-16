@@ -1,6 +1,6 @@
 import { addInner } from "https://jscroot.github.io/element/croot.js";
 import { getWithToken } from "../temp/component.js";
-import { singleTableSewa, singleTableSewa1 } from "../temp/table.js";
+import { singleTableSewa, singleTableSewa1, singleTableSewa2 } from "../temp/table.js";
 
 
 const urlParams = new URLSearchParams(window.location.search);
@@ -15,18 +15,28 @@ const dataSewa  = (value) => {
 }
 
 const dataSewa1  = (value) => {
-    const data1 = singleTableSewa1
+    const data = singleTableSewa1
     .replace("#MULAI#", value.tanggal_mulai)
     .replace("#SELESAI#", value.tanggal_selesai)
 
-    addInner("sewa1", data1);
+    addInner("sewa1", data);
+}
+
+const dataSewa2  = (value) => {
+    const data = singleTableSewa2
+    .replace("#NIK#", value.nik)
+    .replace("#NAMA#", value.namalengkap)
+    .replace("#EMAIL#", value.email)
+    .replace("#NOHP#", value.nohp)
+
+    addInner("sewa2", data);
 }
 
 const responseData = (result) => {
     if (result.status === 200) {
         dataSewa(result.data);
         dataSewa1(result.data);
-        
+        dataSewa2(result.data);
     }
 }
 
