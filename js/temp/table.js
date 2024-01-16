@@ -67,7 +67,7 @@ export const tableSewa = `
 
 export const singleTableSewa = `
 <td>
-<img src="#GAMBAR1#" class="img-fluid rounded-0" style="width: 450px; height: 280px;"/>
+<img src="#GAMBAR1#" class="img-fluid rounded-0" style="width: 200px; height: 280px;"/>
 </td>
 `;
 

@@ -15,11 +15,11 @@ const dataSewa  = (value) => {
 }
 
 const dataSewa1  = (value) => {
-    const data = singleTableSewa1
+    const data1 = singleTableSewa1
     .replace("#MULAI#", value.tanggal_mulai)
     .replace("#SELESAI#", value.tanggal_selesai)
 
-    addInner("sewa1", data);
+    addInner("sewa1", data1);
 }
 
 const responseData = (result) => {

@@ -12,17 +12,21 @@ const dataBill  = (value) => {
     .replace("#GAMBAR#", value.gambar)
 
     addInner("bill", data);
+
+    console.log(data);
 }
 
 const dataBill1  = (value) => {
-    const data = singleTableBill1
+    const data1 = singleTableBill1
     .replace("#KODE#", value.kode)
     .replace("#NAMA#", value.nama)
     .replace("#PANJANG#", value.panjang)
     .replace("#LEBAR#", value.lebar)
     .replace("#HARGA#", value.harga)
 
-    addInner("bill1", data);
+    addInner("bill1", data1);
+
+    console.log(data1);
 }
 
 const dataBill2  = (value) => {
@@ -35,6 +39,8 @@ const dataBill2  = (value) => {
     .replace("#LONGITUDE#", value.longitude)
 
     addInner("bill2", data2);
+
+    console.log(data2);
 }
 
 const responseData = (result) => {
