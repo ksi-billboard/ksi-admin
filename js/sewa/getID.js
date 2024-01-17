@@ -9,7 +9,7 @@ const target_url = "https://asia-southeast2-keamanansistem.cloudfunctions.net/se
 
 const dataBill  = (value) => {
     const data = singleTableBill
-    .replace("#GAMBAR#", value.gambar)
+    .replace("#GAMBAR#", value.billboard.gambar)
 
     addInner("bill", data);
 
@@ -18,11 +18,11 @@ const dataBill  = (value) => {
 
 const dataBill1  = (value) => {
     const data = singleTableBill1
-    .replace("#KODE#", value.kode)
-    .replace("#NAMA#", value.nama)
-    .replace("#PANJANG#", value.panjang)
-    .replace("#LEBAR#", value.lebar)
-    .replace("#HARGA#", value.harga)
+    .replace("#KODE#", value.billboard.kode)
+    .replace("#NAMA#", value.billboard.nama)
+    .replace("#PANJANG#", value.billboard.panjang)
+    .replace("#LEBAR#", value.billboard.lebar)
+    .replace("#HARGA#", value.billboard.harga)
 
     addInner("bill1", data);
 
@@ -31,12 +31,12 @@ const dataBill1  = (value) => {
 
 const dataBill2  = (value) => {
     const data = singleTableBill2
-    .replace("#REGENCY#", value.regency)
-    .replace("#DISTRICT#", value.district)
-    .replace("#VILLAGE#", value.village)
-    .replace("#ADDRESS#", value.address)
-    .replace("#LATITUDE#", value.latitude)
-    .replace("#LONGITUDE#", value.longitude)
+    .replace("#REGENCY#", value.billboard.regency)
+    .replace("#DISTRICT#", value.billboard.district)
+    .replace("#VILLAGE#", value.billboard.village)
+    .replace("#ADDRESS#", value.billboard.address)
+    .replace("#LATITUDE#", value.billboard.latitude)
+    .replace("#LONGITUDE#", value.billboard.longitude)
 
     addInner("bill2", data);
 
@@ -60,10 +60,10 @@ const dataSewa1  = (value) => {
 
 const dataSewa2  = (value) => {
     const data = singleTableSewa2
-    .replace("#NIK#", value.nik)
-    .replace("#NAMA#", value.namalengkap)
-    .replace("#EMAIL#", value.email)
-    .replace("#NOHP#", value.nohp)
+    .replace("#NIK#", value.user.nik)
+    .replace("#NAMA#", value.user.namalengkap)
+    .replace("#EMAIL#", value.user.email)
+    .replace("#NOHP#", value.user.nohp)
 
     addInner("sewa2", data);
 }
