@@ -13,7 +13,7 @@ const dataBill  = (value) => {
 
     addInner("bill", data);
 
-    console.log(data);
+    console.log(value);
 }
 
 const dataBill1  = (value) => {
@@ -26,7 +26,7 @@ const dataBill1  = (value) => {
 
     addInner("bill1", data);
 
-    console.log(data);
+    console.log(value);
 }
 
 const dataBill2  = (value) => {
@@ -40,7 +40,7 @@ const dataBill2  = (value) => {
 
     addInner("bill2", data);
 
-    console.log(data);
+    console.log(value);
 }
 
 const dataSewa  = (value) => {
