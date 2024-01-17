@@ -60,7 +60,7 @@ const dataSewa1  = (value) => {
 
 const dataSewa2  = (value) => {
     const data = singleTableSewa2
-    .replace("#NIK#", value.user.nik)
+    .replace("#KTP#", value.user.ktp)
     .replace("#NAMA#", value.user.namalengkap)
     .replace("#EMAIL#", value.user.email)
     .replace("#NOHP#", value.user.nohp)

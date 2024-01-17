@@ -77,7 +77,7 @@ export const singleTableSewa1 = `
 `;
 
 export const singleTableSewa2 = `
-<td> #NIK# </td>
+<td> #KTP# </td>
 <td> #NAMA# </td>
 <td> #EMAIL# </td>
 <td> #NOHP# </td>
