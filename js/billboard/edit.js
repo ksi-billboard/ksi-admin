@@ -18,7 +18,7 @@ export const isiData = (results) => {
     const inputElement = document.getElementById(id);
     const value = getNestedValue(results, path, index, property);
 
-    if (id === "imagePreview") {
+    if (id === "previewimage") {
       inputElement.innerHTML = `<img src="${value}" alt="Preview Gambar" id="imageupdate" style="max-width: 300px; max-height: 300px;">`;
     } else {
       inputElement.value = value;
