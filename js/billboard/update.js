@@ -8,7 +8,11 @@ const updateTodo = () => {
     const target_url = "https://asia-southeast2-keamanansistem.cloudfunctions.net/billboard?id=" + id;
 
     const imageInput = document.getElementById("gambar");
-    const file = imageInput.files[0];
+    let file = imageInput.files[0];
+
+    if (!file) {
+        file = document.getElementById("imageupdate").src;
+    }
 
     const formData = new FormData();
     formData.append("file", file);

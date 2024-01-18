@@ -1,6 +1,6 @@
 export const isiData = (results) => {
   const inputMapping = [
-    // { id: "gambar", path: "data.gambar" },
+    { id: "previewimage", path: "data.gambar" },
     { id: "kode", path: "data.kode" },
     { id: "nama", path: "data.nama" },
     { id: "panjang", path: "data.panjang" },
@@ -18,12 +18,17 @@ export const isiData = (results) => {
     const inputElement = document.getElementById(id);
     const value = getNestedValue(results, path, index, property);
 
+    if (id === "imagePreview") {
+      inputElement.innerHTML = `<img src="${value}" alt="Preview Gambar" id="imageupdate" style="max-width: 300px; max-height: 300px;">`;
+    } else {
+      inputElement.value = value;
+    }
+
     // const fileName = extractFileNameFromUrl(value);
     // const fileNameElement = document.getElementById("gambar");
     // fileNameElement.textContent = fileName;
     // console.log("fileName:", fileName);
 
-    inputElement.value = value;
     
   });
 };
