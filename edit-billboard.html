@@ -364,12 +364,12 @@
     <script type="module" src="./js/billboard/preview-image.js"></script>
 
     <script>
-      var latitude = document.querySelector('#latitude').value;
-      var longitude = document.querySelector('#longitude').value;
+      var lat = document.querySelector('#latitude').value;
+      var long = document.querySelector('#longitude').value;
   
-      var map = L.map('map').setView([latitude,longitude], 15);
+      var map = L.map('map').setView([lat,long], 15);
   
-      var marker = L.marker([latitude,longitude]).addTo(map);
+      var marker = L.marker([lat,long]).addTo(map);
   
       L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
       maxZoom: 19,
