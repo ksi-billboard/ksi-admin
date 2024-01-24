@@ -1,3 +1,5 @@
+import { getCookie } from "https://jscroot.github.io/cookie/croot.js";
+
 const approveSewa = async (APPROVE) => {
   const id = APPROVE;
   const token = getCookie("Authorization");
