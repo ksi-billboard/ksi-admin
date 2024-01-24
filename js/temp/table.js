@@ -62,7 +62,7 @@ export const tableSewa = `
       </div>
       <div class="job-listing-meta mx-4">
         <div class="job-listing-position">
-        <a href="#" type="button" class="btn btn-success flex-grow-1 ml-4"></a>
+        <button class="btn btn-success flex-grow-1 ml-4" onclick="approveSewa('#APPROVE#')"></button>
         </div>
       </div>
     </div>

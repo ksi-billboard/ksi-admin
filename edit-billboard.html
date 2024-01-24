@@ -364,28 +364,28 @@
     <script type="module" src="./js/billboard/preview-image.js"></script>
 
     <script>
-      var lat = document.querySelector('#latitude').value;
-      var long = document.querySelector('#longitude').value;
-  
-      var map = L.map('map').setView([lat,long], 15);
-  
-      var marker = L.marker([lat,long]).addTo(map);
-  
-      L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-      maxZoom: 19,
-      attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'}).addTo(map);
-  
-      map.on('click', function(e) {
-          var coord = e.latlng;
-          var lat = coord.lat;
-          var lng = coord.lng;
-  
-          document.querySelector('#latitude').value = lat;
-          document.querySelector('#longitude').value = lng;
-  
-          marker.setLatLng([lat,lng]).addTo(map);
-      });
-    </script>
+        var lat = document.querySelector('#latitude').value;
+        var long = document.querySelector('#longitude').value;
+
+        var map = L.map('map').setView([lat,long], 15);
+
+        var marker = L.marker([lat,long]).addTo(map);
+
+        L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        maxZoom: 19,
+        attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'}).addTo(map);
+    
+        map.on('click', function(e) {
+            var coord = e.latlng;
+            var lat = coord.lat;
+            var lng = coord.lng;
+    
+            document.querySelector('#latitude').value = lat;
+            document.querySelector('#longitude').value = lng;
+
+            marker.setLatLng([lat,lng]).addTo(map);
+        });
+          </script>
 
   </body>
 </html>
