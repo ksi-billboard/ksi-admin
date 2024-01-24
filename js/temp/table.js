@@ -57,12 +57,15 @@ export const tableSewa = `
 
     <div class="job-listing-about d-sm-flex custom-width w-100 justify-content-between mx-4">
       <div class="job-listing-position custom-width w-50 mb-3 mb-sm-0">
-      <h2><b>Tanggal Mulai : </b> #MULAI#</h2>
-      <h2><b>Tanggal Selesai : </b> #SELESAI#</h2> 
+        <h2><b>Tanggal Mulai : </b> #MULAI#</h2>
+        <h2><b>Tanggal Selesai : </b> #SELESAI#</h2> 
+        <a href="#" type="button" class="btn btn-success flex-grow-1 ml-4"></a>
       </div>
+      
     </div>
   </li>
 </ul>
+
 `;
 
 export const singleTableSewa = `
