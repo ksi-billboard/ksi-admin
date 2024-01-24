@@ -86,6 +86,11 @@ export const tableSewaApprove = `
       <div class="job-listing-meta">
         <span class="badge badge-danger approved" style="font-size: 20px; font-style: italic;">Approved</span>
       </div>
+      <div class="job-listing-meta mx-4">
+        <div class="job-listing-position">
+        <a href="#" type="button" class="btn btn-danger flex-grow-1 ml-4" onclick="deleteSewa('#HAPUS#')"></a>
+        </div>
+      </div>
     </div>
   </li>
 </ul>
