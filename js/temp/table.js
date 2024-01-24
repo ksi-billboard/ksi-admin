@@ -59,9 +59,12 @@ export const tableSewa = `
       <div class="job-listing-position custom-width w-50 mb-3 mb-sm-0">
         <h2><b>Tanggal Mulai : </b> #MULAI#</h2>
         <h2><b>Tanggal Selesai : </b> #SELESAI#</h2> 
-        <a href="#" type="button" class="btn btn-success flex-grow-1 ml-4"></a>
       </div>
-      
+      <div class="job-listing-meta mx-4">
+        <div class="job-listing-position">
+        <a href="#" type="button" class="btn btn-success flex-grow-1 ml-4"></a>
+        </div>
+      </div>
     </div>
   </li>
 </ul>
