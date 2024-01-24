@@ -15,7 +15,7 @@ const responseData = (result) => {
     if (result.status === 200) {
         Swal.fire({
             icon: "success",
-            title: "Approve Successful",
+            // title: "Approve Successful",
             text: result.message,
         }).then(() => {
             window.location.href = "list-sewa.html";
@@ -23,7 +23,7 @@ const responseData = (result) => {
     } else {
         Swal.fire({
             icon: "error",
-            title: "Approve Failed",
+            // title: "Approve Failed",
             text: result.message,
         });
     }
