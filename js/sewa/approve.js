@@ -30,7 +30,7 @@ const approveSewa = async (APPROVE) => {
       if (response.ok) {
         await Swal.fire({
           icon: "success",
-          text: response.message,
+          text: "Data berhasil diapprove",
           showConfirmButton: false,
         });
         location.reload();
