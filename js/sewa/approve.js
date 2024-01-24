@@ -1,5 +1,6 @@
 const approveSewa = async (APPROVE) => {
   const id = APPROVE;
+  const token = getCookie("Authorization");
 
   const isConfirmed = await Swal.fire({
     text: "Benarkah anda ingin approve data ini?",
@@ -27,7 +28,7 @@ const approveSewa = async (APPROVE) => {
       if (response.ok) {
         await Swal.fire({
           icon: "success",
-          text: "Data berhasil diapprove",
+          text: response.message,
           showConfirmButton: false,
         });
         location.reload();
